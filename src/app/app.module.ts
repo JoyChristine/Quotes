@@ -10,6 +10,8 @@ import { QuotesListComponent } from './quotes/quotes-list/quotes-list.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 
+import { DateAgoPipe } from './pipes/date-ago.pipe';
+
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     QuotesComponent,
     QuotesItemComponent,
     QuotesListComponent,
+    DateAgoPipe,
     
   ],
   imports: [
