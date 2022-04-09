@@ -1,6 +1,6 @@
 import { Quote } from '@angular/compiler';
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { Quotes } from 'src/app/quotes.model';
 
 @Component({
@@ -17,6 +17,7 @@ export class QuotesListComponent implements OnInit {
    new Quotes('water is life','joy',0,0,'Your name'),
 
   ];
+  faCoffee = faCoffee;
  
   constructor() { }
 

@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesItemComponent } from './quotes/quotes-item/quotes-item.component';
 import { QuotesListComponent } from './quotes/quotes-list/quotes-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -19,9 +22,12 @@ import { QuotesListComponent } from './quotes/quotes-list/quotes-list.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
