@@ -1,0 +1,29 @@
+
+*{
+    font-family: 'Handlee', cursive;
+}
+.cards{
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    
+    
+   
+}
+.row{
+    background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png");
+
+}
+.pull-left{
+    width: 30vw;
+   
+}
+.cards a{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #f0f8ff;
+    box-shadow: 2px 2px 3px 2px #000;
+    color:black;
+    text-decoration: none;
+}

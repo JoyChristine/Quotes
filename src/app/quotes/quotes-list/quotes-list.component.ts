@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Quote } from '@angular/compiler';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 import { Quotes } from 'src/app/quotes.model';
 
@@ -8,14 +9,15 @@ import { Quotes } from 'src/app/quotes.model';
   styleUrls: ['./quotes-list.component.css']
 })
 export class QuotesListComponent implements OnInit {
- 
-
+  
   quotes : Quotes[] =[
-    new Quotes('an apple a day keeps a doctor away','doctor mike',0,0),
-    new Quotes('The way','mwikali',0,0),
-    new Quotes('water is life','joy',0,0),
+    new Quotes('an apple a day keeps a doctor away','doctor mike',0,0,'Your name'),
+    new Quotes('an apple a day keeps a doctor away ','mwikali',0,0,'Your name'),
+   new Quotes('water is life','joy',0,0,'Your name'),
+   new Quotes('water is life','joy',0,0,'Your name'),
 
   ];
+ 
   constructor() { }
 
   ngOnInit(): void {
