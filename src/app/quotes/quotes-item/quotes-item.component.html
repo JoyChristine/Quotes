@@ -1,25 +1,22 @@
 
 
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-xs-12">
         <button class="btn btn-success">New Quote</button>
     </div>
-</div>
-<hr>
+</div> 
+<hr>-->
 <div class="row">
     <div class="col-xs-12">
-        <a href="#"class = "list-group-item clearfix" >
+        <a href="#" class = "list-group-item clearfix" *ngFor='let quote of quotes'>
             <div class="pull-left">
                
-                <h4 class="list-group-item-heading"></h4>
-                <p class="list-group-item-text"></p>
+                <h4 class="list-group-item-heading">{{quote.quote}}</h4>
+                <p class="list-group-item-text">{{quote.author}}</p>
             </div>
-           
+            <button class="btn btn-success">New Quote</button>
         </a>
-            
-            
-     
     </div>
 </div>
     
