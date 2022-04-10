@@ -2,4 +2,10 @@
     background-color: #0c2d33;
     color: #fff;
     
+    
+}
+.list-group-item{
+    margin-left: 2%;
+    width: 100%;
+    margin-top:7%
 }
