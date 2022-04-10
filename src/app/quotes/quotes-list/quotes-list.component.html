@@ -2,7 +2,7 @@
 <div class="row " >
     <div class="cards">
         
-        <a href="#"  class = "list-group-item clearfix" *ngFor='let quote of quotes'>
+        <a href="#"  class = "list-group-item clearfix" *ngFor='let quote of quotes;let i =index'>
             <div class="pull-left">
                
                 <h4 class="list-group-item-heading">{{quote.quote}} <br>
@@ -17,8 +17,9 @@
               
             
             </div>
-        
-        <button class="btn btn-danger">Delete</button>
+       
+            <app-btn-delete *ngIf='quote.quote' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-btn-delete>
+       
            
         </a>
     </div>
