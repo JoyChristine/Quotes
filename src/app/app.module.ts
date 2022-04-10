@@ -11,6 +11,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { BtnDeleteComponent } from './quotes/quotes-list/btn-delete/btn-delete.component';
+
+
 
 
 
@@ -22,7 +25,8 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     QuotesItemComponent,
     QuotesListComponent,
     DateAgoPipe,
-    
+    BtnDeleteComponent,
+  
   ],
   imports: [
     BrowserModule,
