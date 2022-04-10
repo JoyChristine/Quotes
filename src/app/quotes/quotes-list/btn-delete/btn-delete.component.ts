@@ -8,11 +8,18 @@ import { Quotes } from 'src/app/quotes.model';
 })
 export class BtnDeleteComponent implements OnInit {
 
-  @Input() quote: Quotes | undefined;
+  @Input()
+  quote!: Quotes;
   @Output() isComplete = new EventEmitter<boolean>();
 
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
+  }
+  upvote(){
+    this.quote.upvote+=1;
+  }
+  downvote(){
+    this.quote.downvote+=1;
   }
   constructor() { }
 
