@@ -9,7 +9,10 @@ import { Quotes } from 'src/app/quotes.model';
   styleUrls: ['./quotes-list.component.css']
 })
 export class QuotesListComponent implements OnInit {
+  // isComplete: any;
+  // isComplete: any;
   
+
   quotes : Quotes[] =[
     new Quotes('an apple a day keeps a doctor away','doctor mike',0,0,'Your name',new Date(2022,1,9)),
     new Quotes('an apple a day keeps a doctor away ','mwikali',0,0,'Your name',new Date(2022,3,8)),
@@ -17,7 +20,12 @@ export class QuotesListComponent implements OnInit {
    new Quotes('water is life','joy',0,0,'Your name',new Date(2019,6,9)),
 
   ];
-  faCoffee = faCoffee;
+  
+  completeQuote(isComplete: any, index: number){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
  
   constructor() { }
 
