@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 
 import { DateAgoPipe } from './pipes/date-ago.pipe';
 import { BtnDeleteComponent } from './quotes/quotes-list/btn-delete/btn-delete.component';
+import { HighlightDirective } from './highlight.directive';
+
+
 
 
 
@@ -26,6 +29,9 @@ import { BtnDeleteComponent } from './quotes/quotes-list/btn-delete/btn-delete.c
     QuotesListComponent,
     DateAgoPipe,
     BtnDeleteComponent,
+    HighlightDirective
+   
+    
   
   ],
   imports: [
