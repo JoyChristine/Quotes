@@ -1,5 +1,37 @@
 *{
-    background-color: rgb(171, 207, 195);
-    width: 100%;
-    font-family: 'Architects Daughter',cursive;
+    /* background-color: rgb(171, 207, 195); */
+    /* overflow: hidden  !important; */
+    width: 100.9%;
+    /* width: 100% !important; */
+    /* 
+    font-family: 'Architects Daughter',cursive; 
+    background-repeat: no-repeat; */
+
+}
+.row{
+    /* background-image:  url("https://images.unsplash.com/photo-1461301214746-1e109215d6d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); */
+    overflow:hidden !important;
+    /* position: relative; */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.col-app-header{
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    
+    background-image: url("https://images.unsplash.com/photo-1541617219835-3689726fa8e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ymx1ZSUyMG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+}
+h1{
+    text-align: center;
+    COLOR: WHITE;
+    padding-top:5%;font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 5vw;
+}
+h2{
+    text-align: center;
+    COLOR: WHITE;
+    font-weight: bold;
+    font-family: 'Grape Nuts', cursive;
 }
