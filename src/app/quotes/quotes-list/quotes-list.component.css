@@ -12,13 +12,14 @@
    
 }
 
-.pull-left{
+.list-group-item{
     width: 30vw;
    
 }
 .cards a{
     margin-top: 2%;
     margin-bottom: 2%;
+    /* background-color: #B5C0E6; */
     background-color: #f0f8ff;
     box-shadow: 2px 2px 3px 2px #000;
     color:black;
