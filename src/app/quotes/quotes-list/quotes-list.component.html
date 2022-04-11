@@ -7,7 +7,7 @@
         <div class="cards">
         
             <a href="javascript:void(0)"  class = "list-group-item clearfix" *ngFor='let quote of quotes;let i =index'>
-                <div *ngIf="quote.upvote > 2; then highlight else empty"></div>
+                <div *ngIf="highestUpvote() === quote.upvote && quote.upvote > 0; then highlight else nothing"></div>
                 <ng-template #highlight >
                     <div appHighlight class="pull-left">
                         <h4  class="list-group-item-heading">{{quote.quote}} <br>
@@ -19,7 +19,7 @@
                     
                     
                 </ng-template>
-                <ng-template #empty>
+                <ng-template #nothing>
                     <div class="pull-left">
                         <h4  class="list-group-item-heading">{{quote.quote}} <br>
                         
