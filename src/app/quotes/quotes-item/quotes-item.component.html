@@ -61,7 +61,7 @@
         <button [disabled]="!quotesForm.valid"
         type="submit" class="btn btn-sm btn-success">Add Quote</button>
        
-        <div *ngIf="quotesForm.invalid" 
+        <div *ngIf="!quotesForm.valid" 
         style="font-size:1vw;" 
         >
             Fill all fields to activate button
