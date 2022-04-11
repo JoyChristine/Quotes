@@ -1,11 +1,14 @@
-*{
-    background-color: #0c2d33;
+.myForm{
+    background-color: #263137;
     color: #fff;
+    margin-left: 2%;
+    
+    margin-top:7%;
+    border-radius: 2%;
+    padding: 2% 5% 15% 5%;
     
     
 }
-.list-group-item{
-    margin-left: 2%;
-    width: 100%;
-    margin-top:7%
+#fill{
+    text-decoration: underline;
 }
