@@ -1,6 +1,6 @@
-import { Quote } from '@angular/compiler';
+
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 import { Quotes } from 'src/app/quotes.model';
 
 @Component({
@@ -9,15 +9,23 @@ import { Quotes } from 'src/app/quotes.model';
   styleUrls: ['./quotes-list.component.css']
 })
 export class QuotesListComponent implements OnInit {
-  // isComplete: any;
-  // isComplete: any;
   
+  @Input()
+  myquotes!: Quotes;
+  @Output() isComplete = new EventEmitter<boolean>();
+  
+  upvote(){
+    this.myquotes.upvote+=1;
+  }
+  downvote(){
+    this.myquotes.downvote+=1;
+  }
 
   quotes : Quotes[] =[
-    new Quotes('an apple a day keeps a doctor away','doctor mike',0,0,'Your name',new Date(2022,1,9)),
-    new Quotes('an apple a day keeps a doctor away ','mwikali',0,0,'Your name',new Date(2022,3,8)),
-   new Quotes('water is life','joy',0,4,'Your name',new Date(2019,6,9)),
-   new Quotes('water is life','joy',1,2,'Your name',new Date(2019,6,9)),
+    new Quotes('Nothing is impossible. The word itself says ‘I’m possible!','Audrey Hepburn',0,0,'Joy',new Date(2022,3,8)),
+    new Quotes('The bad news is time flies. The good news is you’re the pilot.','Michael Altshuler',0,0,'Christine',new Date(2022,2,10)),
+   new Quotes('You are never too old to set another goal or to dream a new dream','Malala Yousafzai',0,0,'Samuel',new Date(2021,2,9)),
+   new Quotes('Faith without action is dead','James',0,0,'Grace',new Date(2019,9,9)),
 
   ];
   
@@ -30,6 +38,14 @@ export class QuotesListComponent implements OnInit {
       }
     }
   }
+  addedQuote(quote: Quotes){
+    this.quotes.push(quote)
+  }
+  
+  quoteDelete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+ 
  
   constructor() { }
 
