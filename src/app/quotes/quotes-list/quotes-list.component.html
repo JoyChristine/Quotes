@@ -1,43 +1,40 @@
 
 <div class="row " >
-    <div class="cards">
-        
-        <a  href="#"  class = "list-group-item clearfix" *ngFor='let quote of quotes;let i =index'>
-            <div *ngIf="quote.upvote > 10; then highlight else empty"></div>
-            <ng-template #highlight >
-                <div appHighlight class="pull-left">
-                    <h4  class="list-group-item-heading">{{quote.quote}} <br>
-                       </h4> 
-                    <p class="list-group-item-text">Author: {{quote.author}}</p>
-                    <p>Posted By: {{quote.name}} &nbsp; &nbsp;  {{quote.completeDate|dateAgo}}</p>
-                    <app-btn-delete *ngIf='quote.quote' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-btn-delete>
-                </div>
-                
-                
-            </ng-template>
-            <ng-template #empty>
-                <div class="pull-left">
-                    <h4  class="list-group-item-heading">{{quote.quote}} <br>
-                    
-                       </h4> 
-                    <p class="list-group-item-text">Author: {{quote.author}}</p>
-                    <p>Posted By: {{quote.name}} &nbsp; &nbsp;  {{quote.completeDate|dateAgo}}</p>
-                    <app-btn-delete *ngIf='quote.quote' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-btn-delete>
-                </div>
-                
-            </ng-template>
-           
-               
-                
-                
-              
-            
-           
-       
-           
-       
-           
-        </a>
+    <div class="col-md-3">
+        <app-quotes-item (add)="addedQuote($event)" ></app-quotes-item>
     </div>
-</div>
+    <div class="col-md-9">
+        <div class="cards">
+        
+            <a href="javascript:void(0)"  class = "list-group-item clearfix" *ngFor='let quote of quotes;let i =index'>
+                <div *ngIf="quote.upvote > 2; then highlight else empty"></div>
+                <ng-template #highlight >
+                    <div appHighlight class="pull-left">
+                        <h4  class="list-group-item-heading">{{quote.quote}} <br>
+                           </h4> 
+                        <p class="list-group-item-text">Author: {{quote.author}}</p>
+                        <p>Posted By: {{quote.name}} &nbsp; &nbsp;  {{quote.completeDate|dateAgo}}</p>
+                        <app-btn-delete *ngIf='quote.quote' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-btn-delete>
+                    </div>
+                    
+                    
+                </ng-template>
+                <ng-template #empty>
+                    <div class="pull-left">
+                        <h4  class="list-group-item-heading">{{quote.quote}} <br>
+                        
+                           </h4> 
+                        <p class="list-group-item-text">Author: {{quote.author}}</p>
+                        <p>Posted By: {{quote.name}} &nbsp; &nbsp;  {{quote.completeDate|dateAgo}}</p>
+                        <app-btn-delete *ngIf='quote.quote' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-btn-delete>
+                    </div>
+                    
+                </ng-template>
+               
+                   
+               
+            </a>
+        </div>
+    </div>
     
+</div>
