@@ -16,6 +16,7 @@ export class QuotesListComponent implements OnInit {
   
   upvote(){
     this.myquotes.upvote+=1;
+    console.log(this.upvote)
   }
   downvote(){
     this.myquotes.downvote+=1;
@@ -46,6 +47,22 @@ export class QuotesListComponent implements OnInit {
     this.isComplete.emit(complete);
   }
  
+  // arr: number[] = this.quotes.map(quote=>quote.upvote)
+  // highestUpvote = Math.max(...this.arr)  
+  highestUpvote() {
+    let quotesUp =[],
+       bestVote: number
+       
+    for(let i = 0; i < this.quotes.length; i++) {
+      quotesUp.push(this.quotes[i].upvote)
+    }
+    quotesUp.sort(function(a,b){
+      return b - a
+    })
+    bestVote = quotesUp[0]
+    return bestVote
+  }
+  
  
   constructor() { }
 
