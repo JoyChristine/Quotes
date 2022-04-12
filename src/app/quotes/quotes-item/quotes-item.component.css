@@ -1,8 +1,8 @@
 .myForm{
-    background-color: #263137;
+    background-color: #142e3b;
     color: #fff;
     margin-left: 2%;
-    
+    width: 100%;
     margin-top:7%;
     border-radius: 2%;
     padding: 2% 5% 15% 5%;
@@ -11,4 +11,8 @@
 }
 #fill{
     text-decoration: underline;
+}
+.btn{
+    color: #fff;
+    background-color:rgb(25, 85, 155);
 }
