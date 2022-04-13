@@ -14,13 +14,13 @@ export class QuotesListComponent implements OnInit {
   myquotes!: Quotes;
   @Output() isComplete = new EventEmitter<boolean>();
   
-  upvote(){
-    this.myquotes.upvote+=1;
-    console.log(this.upvote)
-  }
-  downvote(){
-    this.myquotes.downvote+=1;
-  }
+  // upvote(){
+  //   this.myquotes.upvote+=1;
+  //   console.log(this.upvote)
+  // }
+  // downvote(){
+  //   this.myquotes.downvote+=1;
+  // }
 
   quotes : Quotes[] =[
     new Quotes('Nothing is impossible. The word itself says ‘I’m possible!','Audrey Hepburn',0,0,'Joy',new Date(2022,3,8)),

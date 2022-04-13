@@ -1,7 +1,9 @@
 .btn{
-    border:1px rgb(125, 18, 212) solid;
+    border:1px #ef4e30 solid;
+    font-size: 1vw;
+    
 }
 .btn:hover{
     color:white;
-    background-color:rgb(125, 18, 212);
+    background-color:#ef4e30;
 }
