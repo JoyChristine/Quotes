@@ -11,7 +11,7 @@ export class QuotesItemComponent implements OnInit {
   author!: string;
   name!: string;
   
-  newQuote!: Quotes;
+  // newQuote!: Quotes;
 
   @Output() add = new EventEmitter<Quotes>();
   
