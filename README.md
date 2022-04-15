@@ -3,7 +3,7 @@
 
 
 ## Description
-![image](https://user-images.githubusercontent.com/57414671/162889126-5671cfc4-023e-4000-9ab6-0845659debe2.png)
+![image](https://user-images.githubusercontent.com/57414671/163548496-0a9357c3-2cd2-4758-ba80-15cffdd5baac.png)
 
 ## Description
 This application displays some of your favorite quote authors together with their quotes. The application allows a user to create a quote,to like/dislike existing quotes and also delete goals. The application highlights the quote with the highest upvotes.
